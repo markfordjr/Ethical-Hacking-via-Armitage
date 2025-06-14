@@ -1,16 +1,104 @@
-# Ethical-Hacking-via-Armitage
+# Ethical Hacking via Armitage
 
-Project Description:
-This GitHub project details my experience as a student participating in a cybersecurity field trip, where I engaged in the three phases of penetration testing using a tool called Armitage. The project took place in a lab environment set up to mimic real-world cybersecurity scenarios.
+**🛠️ Exploitation Lab: Windows 10 Attacks, Client-Server Interception, and Post-Exploitation Control**
+**Author:** Mark Ford Jr.
 
-Lab Setup:
-Our lab consisted of two virtual machines (VMs): one running Kali Linux as the attacker and another running Windows 10 as the target, managed through Oracle VM VirtualBox on a host computer with Kubuntu Linux. From the Kali VM, I utilized Armitage to explore and exploit vulnerabilities in a chat server application (vchat.exe) running on the Windows VM.
+---
 
-Steps to Set Up the Lab:
-Initially, I launched Oracle VM VirtualBox Manager on the host computer to start both the Kali and Windows VMs. After logging into Kali with the designated credentials, I accessed the Windows VM to activate the chat server. To facilitate the penetration test, I disabled the real-time protection on Windows to prevent any interference with our testing procedures.
+## 🎯 Overview
 
-Penetration Testing Phases:
-The testing began with reconnaissance, where I employed Armitage to scan for and analyze network services on the Windows VM. This phase involved identifying the VM’s IP address and using targeted scans to ascertain active services and vulnerabilities. During the exploitation phase, I focused on exploiting a known vulnerability within vchat.exe. This required several attempts to successfully breach the system, using Armitage’s array of attack tools. Once access was gained, in the post-exploitation phase, I navigated the compromised system through a Meterpreter shell, executing commands to view and manipulate files, deepening my understanding of the attacker’s capabilities in a real intrusion scenario.
+This ethical hacking project demonstrates end-to-end penetration testing on Windows 10 virtual environments using **Armitage**, **Metasploit**, and **Kali Linux**.
+It includes client-server interruption, privilege escalation, **multi-user testing**, **camera hijacking**, and **keylogger installation** — all within a legally controlled lab.
 
-Educational Objectives:
-Through this field trip, I significantly enhanced my practical cybersecurity skills, particularly in setting up and maneuvering through virtual environments tailored for security testing. I gained firsthand experience in conducting penetration tests from initial scanning to final exploitation and post-exploitation analysis. This project not only reinforced my theoretical knowledge of network vulnerabilities and attack mechanisms but also provided practical insights into the dynamics of cybersecurity defenses and ethical hacking.
+---
+
+## 🔐 Objectives
+
+* Exploit vulnerable Windows 10 and legacy systems in isolated VMs
+* Simulate client-server attacks across two user profiles
+* Perform real-world post-exploitation: webcam access, persistent keylogger
+* Log, document, and replay exploitation steps for training purposes
+
+---
+
+## 🧰 Tools & Technologies
+
+* **Kali Linux** – Penetration testing OS
+* **Armitage** – GUI interface for Metasploit
+* **Metasploit Framework** – Exploitation engine
+* **VirtualBox** – VM hosting (Windows 10, XP, 7)
+* **Sysinternals** – For behavior monitoring and testing
+* **Custom Python Keylogger** – Installed during post-exploitation
+* **Webcam Capture Payloads** – For hijacking camera feed
+
+---
+
+## 💻 Exploits & Techniques Used
+
+| Technique                   | Target OS     | Outcome                             |
+| --------------------------- | ------------- | ----------------------------------- |
+| MS08-067                    | Windows XP    | Remote code execution               |
+| EternalBlue (MS17-010)      | Windows 7     | SYSTEM-level shell                  |
+| Web Delivery Payload (HTTP) | Windows 10    | Command execution with user access  |
+| Meterpreter Webcam Snap     | Windows 10    | Captured images from camera         |
+| Persistent Keylogger Deploy | Windows 10    | Logged keystrokes from both users   |
+| Session Hijack (multi-user) | Client/Server | Intercepted and manipulated traffic |
+
+---
+
+## 🧪 Test Lab Setup
+
+* **2 Windows 10 user profiles** configured for real-world client-server simulation
+* **Kali host** on bridged network mode
+* VMs fully isolated with no external access
+* Manual logs maintained for each action
+
+---
+
+## 🔍 Post-Exploitation Actions
+
+* **Keylogger** installation (custom Python-based, persistent on reboot)
+* **Webcam control** using `meterpreter > webcam_snap`
+* **User enumeration** and privilege escalation
+* Simulated **session hijack** with credential reuse across services
+* Captured keystrokes: login attempts, emails, and browser entries
+
+---
+
+## 📊 Results
+
+* Demonstrated **full exploitation chain** on Windows 10 systems
+* Successfully hijacked two user sessions and exfiltrated sensitive data
+* Gained persistent access with **no AV detection in lab**
+* Clear documentation for future student or SOC analyst reference
+
+---
+
+## ⚠️ Legal Notice
+
+All activities were performed in a **legal and isolated virtual lab**.
+Unauthorized access or use of these techniques on real systems is illegal.
+This project is for **educational and training purposes only**.
+
+---
+
+## 🧭 Future Enhancements
+
+* Add privilege escalation for Linux targets
+* Test AV evasion techniques and defender bypass
+* Integrate logging into centralized SIEM
+* Expand to social engineering payloads (e.g., malicious PDFs, links)
+
+---
+
+## 📞 Contact
+
+**Mark Ford Jr.**
+GitHub: [markfordjr](https://github.com/markfordjr)
+Project Repo: [Ethical Hacking via Armitage](https://github.com/markfordjr/Ethical-Hacking-via-Armitage)
+
+---
+
+## 📄 License
+
+MIT License
