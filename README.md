@@ -1,6 +1,7 @@
 # Ethical Hacking via Armitage
 
 **🛠️ Exploitation Lab: Windows 10 Attacks, Client-Server Interception, and Post-Exploitation Control**
+
 **Author:** Mark Ford Jr.
 
 ---
@@ -95,6 +96,7 @@ This project is for **educational and training purposes only**.
 
 **Mark Ford Jr.**
 GitHub: [markfordjr](https://github.com/markfordjr)
+
 Project Repo: [Ethical Hacking via Armitage](https://github.com/markfordjr/Ethical-Hacking-via-Armitage)
 
 ---
